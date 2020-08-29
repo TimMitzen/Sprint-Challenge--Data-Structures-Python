@@ -7,7 +7,7 @@ class RingBuffer:
 
 
     def append(self, item):
-        if self.ring_buffer_data < self.capacity:#if the rbd is less than cap append
+        if len(self.ring_buffer_data) < self.capacity:#if the rbd is less than cap append
             self.ring_buffer_data.append(item)
         else:
             self.ring_buffer_data[self.index] = item
@@ -17,3 +17,4 @@ class RingBuffer:
 
     def get(self):
         return self.ring_buffer_data
+
